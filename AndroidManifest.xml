@@ -1,0 +1,159 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cs340.nfc.smoking.survey"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+       
+     <uses-permission android:name="android.permission.NFC" />
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="15" />
+
+
+
+    <application
+        android:name=".SharedVars"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Start"
+            android:label="@string/title_activity_start" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NFC_Settings"
+            android:label="@string/title_activity_nfc__settings" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SurveyInput"
+            android:label="@string/title_activity_survey_input" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Home"
+            android:label="@string/title_activity_home" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SurveyRead"
+            android:label="@string/title_activity_survey_read" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FileRead"
+            android:label="@string/title_activity_file_read" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SurveyPop"
+            android:label="@string/title_activity_survey_pop" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FileExplore"
+            android:label="@string/title_activity_file_explore" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ChooseSurvey"
+            android:label="@string/title_activity_choose_survey" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SurveyPage"
+            android:label="@string/title_activity_survey_page" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SurveyFin"
+            android:label="@string/title_activity_survey_fin" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".AndroidNfcActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|keyboardHidden"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".NfcReaderActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|keyboardHidden"
+            >
+           
+           <!-- open any tag with ndef content -->
+           <intent-filter>
+   				 <action   android:name="android.nfc.action.TECH_DISCOVERED" />
+   				 <category android:name="android.intent.category.DEFAULT"/>
+			</intent-filter>            
+		 	
+			<meta-data android:name="android.nfc.action.TECH_DISCOVERED" android:resource="@xml/nfc_tech_filter" />
+
+			<!-- see also http://stackoverflow.com/questions/7114297/how-specify-mimetype-for-read-nfc-tag-with-url -->
+			
+        </activity>
+
+        <activity
+            android:name=".NfcWriterActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|keyboardHidden"
+            >
+        </activity>
+   
+    </application>
+
+</manifest>

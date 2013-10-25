@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@drawable/background">
+	
+    
+    <TextView
+        android:id="@+id/finishText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="111dp"
+        android:text="@string/saveAns"
+        android:gravity="center"
+        android:textColor="#FFA07A"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/finishText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="95dp"
+        android:textColor="#FFFFFF"
+        android:text="@string/save" />
+
+</RelativeLayout>

@@ -1,0 +1,2869 @@
+<!--Notes:
+	For NextQues or DefaultNextQues: 0 specifies that current question is end of survey
+	Radio Button conditions: numbers ONLY (1+) separated by "|"
+	Check Boxes conditions: numbers 1-5 separated by "&" 
+	Slider Conditions: - [less than] (number) OR + [greater than] (number) OR > (num) & < (num) 
+	
+	CW: XML parsing does not like the use of the '&' character for the Check Boxes conditions.
+	The '*' character is used between Check Boxes conditions instead.
+	
+	CW: XML parsing does not like the use of ">" or "<".  
+	Replacement slider conditions: -8 "answer is less than 8"; +5 "answer is greater than 5";
+									-8|+5 "answer is less than 8 AND greater than 5"
+-->
+
+<Survey>
+<Question>
+	<QuesID> 1 </QuesID>
+	<SubID> </SubID>
+	<QuestionString>How long ago did you finish smoking?</QuestionString>
+	<QuesType>Button</QuesType>
+	<NumOfChoices> 7
+		<Choices>
+			<choice>1 minute</choice>
+			<choice>2-5 minutes</choice>
+			<choice>6-15 minutes</choice>
+			<choice>16-30 minutes</choice>
+			<choice>31-45 minutes</choice>
+			<choice>46-60 minutes</choice>
+			<choice>60+ minutes</choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum> </StartNum>
+			<StartLabel> </StartLabel>
+		</Start>
+		<End>
+			<EndNum> </EndNum>
+			<EndLabel> </EndLabel>
+		</End>
+		<NumOfDivisions> </NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>1|22345|63|14|735
+			<NextQuestion>2a</NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>2</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID> 2 </QuesID>
+	<SubID> </SubID>
+	<QuestionString>When Smoking: How much did you smoke?</QuestionString>
+	<QuesType>Button</QuesType>
+	<NumOfChoices> 3
+		<Choices>
+			<choice>Less than one cigarette</choice>
+			<choice>One cigarette</choice>
+			<choice>More than one cigarette</choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum> </StartNum>
+			<StartLabel> </StartLabel>
+		</Start>
+		<End>
+			<EndNum> </EndNum>
+			<EndLabel> </EndLabel>
+		</End>
+		<NumOfDivisions> </NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>3</DefaultNext>
+</Question>
+
+
+<Question>
+	<QuesID>3</QuesID>
+	<SubID> </SubID>
+	<QuestionString>When Smoking: How much did you smoke?</QuestionString>
+	<QuesType>Check</QuesType>
+	<NumOfChoices> 4
+		<Choices>
+			<choice>Less than one cigarette</choice>
+			<choice>One cigarette</choice>
+			<choice>More than one cigarette</choice>
+			<choice>More than five cigarettes</choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum> </StartNum>
+			<StartLabel> </StartLabel>
+		</Start>
+		<End>
+			<EndNum> </EndNum>
+			<EndLabel> </EndLabel>
+		</End>
+		<NumOfDivisions> </NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>3*4
+			<NextQuestion>7a</NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>4</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>4</QuesID>
+	<SubID> </SubID>
+	<QuestionString>Are you drinking a caffeinated ?</QuestionString>
+	<QuesType>Button</QuesType>
+	<NumOfChoices> 2
+		<Choices>
+			<choice>Yes</choice>
+			<choice>No</choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum></StartNum>
+			<StartLabel></StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel></MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum></EndNum>
+			<EndLabel></EndLabel>
+		</End>
+		<NumOfDivisions></NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>5</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>5</QuesID>
+	<SubID> </SubID>
+	<QuestionString>Right now: What are you doing (check all that apply)?</QuestionString>
+	<QuesType>check</QuesType>
+	<NumOfChoices>18
+		<Choices>
+			<choice>Hanging out</choice>
+			<choice>TV/Music/Movie</choice>
+			<choice>Telephone</choice>
+			<choice>Texting</choice>
+			<choice>Computer</choice>
+			<choice>Reading</choice>
+			<choice>Class work</choice>
+			<choice>Job</choice>
+			<choice>Eat/Drink</choice>
+			<choice>Alcohol Use</choice>
+			<choice>Marijuana Use</choice>
+			<choice>Party</choice>
+			<choice>Physical Activity/Sports</choice>
+			<choice>Walking</choice>
+			<choice>Organized Club</choice>
+			<choice>Transit/Driving</choice>
+			<choice>Nothing</choice>
+			<choice>Other</choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum></StartNum>
+			<StartLabel></StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel></MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum></EndNum>
+			<EndLabel></EndLabel>
+		</End>
+		<NumOfDivisions></NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>9*11*15
+			<NextQuestion>5a</NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>6</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>6</QuesID>
+	<SubID> </SubID>
+	<QuestionString>Right now: I feel Happy</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not At All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>-5
+			<NextQuestion>13a</NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>7</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>7</QuesID>
+	<QuestionString>When smoking: Were you with others?</QuestionString>
+	<QuesType>button</QuesType>
+	<NumOfChoices>3    
+		<Choices>
+			<choice>Alone</choice>
+			<choice>Alone-others nearby</choice>
+			<choice>With others</choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum></StartNum>
+			<StartLabel></StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel></MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum></EndNum>
+			<EndLabel></EndLabel>
+		</End>
+		<NumOfDivisions></NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>2|3
+			<NextQuestion>6a1</NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>8</DefaultNext>
+</Question>
+
+<Survey>
+<Question>
+	<QuesID>1</QuesID>
+	<QuestionString>How long ago did you finish smoking?</QuestionString>
+	<QuesType>button</QuesType>
+	<NumOfChoices> 7
+		<Choices>
+			<choice>1 minute</choice>
+			<choice>2-5 minutes</choice>
+			<choice>6-15 minutes</choice>
+			<choice>16-30 minutes</choice>
+			<choice>31-45 minutes</choice>
+			<choice>46-60 minutes</choice>
+			<choice>60+ minutes</choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum> </StartNum>
+			<StartLabel> </StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel> </MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum> </EndNum>
+			<EndLabel> </EndLabel>
+		</End>
+		<NumOfDivisions> </NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>2</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>2a</QuesID>
+	<QuestionString>Right now: I feel Happy</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not At All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>2b</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>2b</QuesID>
+	<QuestionString>Right now: I feel Tired</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not At All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>-8|+5
+			<NextQuestion>13j</NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>2c</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>2c</QuesID>
+	<QuestionString>Right now: I feel Embarrassed</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not At All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>2d</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>2d</QuesID>
+	<QuestionString>Right now: I feel Relaxed</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not At All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>2e</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>2e</QuesID>
+	<QuestionString>Right now: I feel Sad</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not At All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>2f</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>2f</QuesID>
+	<QuestionString>Right now: I feel Stressed</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not At All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>2g</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>2g</QuesID>
+	<QuestionString>Right now: I feel Angry</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not At All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>2h</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>2h</QuesID>
+	<QuestionString>Right now: I feel Cheerful</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not At All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>2i</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>2i</QuesID>
+	<QuestionString>Right now: I feel Bored</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not At All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>2j</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>2j</QuesID>
+	<QuestionString>Right now: I feel Frustrated</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not At All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>2k</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>2k</QuesID>
+	<QuestionString>Right now: I feel Nervous</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not At All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>2l</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>2l</QuesID>
+	<QuestionString>Right now: I feel Irritable</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not At All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>2m</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>2m</QuesID>
+	<QuestionString>Right now: I have Trouble Concentrating</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not At All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>2n</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>2n</QuesID>
+	<QuestionString>Right now: I feel Confident</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not At All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>2o</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>2o</QuesID>
+	<QuestionString>Right now: I feel Accepted by Others</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not At All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>2p</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>2p</QuesID>
+	<QuestionString>Right now: I feel Restless</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not At All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>2q</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>2q</QuesID>
+	<QuestionString>Right now: I feel Impatient</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not At All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>3</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>3a</QuesID>
+	<QuestionString>How pleasurable was this last cigarette?</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not At All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>2h</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>3b</QuesID>
+	<QuestionString>How satisfying was this last cigarette?</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not At All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>4</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>4</QuesID>
+	<QuestionString>When smoking: How much did you smoke?</QuestionString>
+	<QuesType>button</QuesType>
+	<NumOfChoices>3
+		<Choices>
+			<choice>Less than one cigarette</choice>
+			<choice>One cigarette</choice>
+			<choice>More than once cigarette</choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum></StartNum>
+			<StartLabel></StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel></MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum></EndNum>
+			<EndLabel></EndLabel>
+		</End>
+		<NumOfDivisions></NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>5</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>5</QuesID>
+	<QuestionString>Right now: What are you doing (check all that apply)?</QuestionString>
+	<QuesType>check</QuesType>
+	<NumOfChoices>18
+		<Choices>
+			<choice>Hanging out</choice>
+			<choice>TV/Music/Movie</choice>
+			<choice>Telephone</choice>
+			<choice>Texting</choice>
+			<choice>Computer</choice>
+			<choice>Reading</choice>
+			<choice>Class work</choice>
+			<choice>Job</choice>
+			<choice>Eat/Drink</choice>
+			<choice>Alcohol Use</choice>
+			<choice>Marijuana Use</choice>
+			<choice>Party</choice>
+			<choice>Physical Activity/Sports</choice>
+			<choice>Walking</choice>
+			<choice>Organized Club</choice>
+			<choice>Transit/Driving</choice>
+			<choice>Nothing</choice>
+			<choice>Other</choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum></StartNum>
+			<StartLabel></StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel></MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum></EndNum>
+			<EndLabel></EndLabel>
+		</End>
+		<NumOfDivisions></NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>9
+			<NextQuestion>5a</NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>6</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>5a</QuesID>
+	<QuestionString>Are you drinking a caffeinated this?</QuestionString>
+	<QuesType>button</QuesType>
+	<NumOfChoices>2
+		<Choices>
+			<choice>Yes</choice>
+			<choice>No</choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum></StartNum>
+			<StartLabel></StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel></MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum></EndNum>
+			<EndLabel></EndLabel>
+		</End>
+		<NumOfDivisions></NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>6</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>6</QuesID>
+	<QuestionString>When smoking: Were you with others?</QuestionString>
+	<QuesType>button</QuesType>
+	<NumOfChoices>3
+		<Choices>
+			<choice>Alone</choice>
+			<choice>Alone-others nearby</choice>
+			<choice>With others</choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum></StartNum>
+			<StartLabel></StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel></MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum></EndNum>
+			<EndLabel></EndLabel>
+		</End>
+		<NumOfDivisions></NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>2|3
+			<NextQuestion>6a1</NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>7</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>6a1</QuesID>
+	<QuestionString>When you smoked did others...?</QuestionString>
+	<QuesType>button</QuesType>
+	<NumOfChoices>3
+		<Choices>
+			<choice>Encouraging smoking</choice>
+			<choice>Neither encourage nor discourage smoking</choice>
+			<choice>Discourage smoking</choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum></StartNum>
+			<StartLabel></StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel></MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum></EndNum>
+			<EndLabel></EndLabel>
+		</End>
+		<NumOfDivisions></NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>6a1i</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>6a1i</QuesID>
+	<QuestionString>Who was nearby (check all that apply)?</QuestionString>
+	<QuesType>check</QuesType>
+	<NumOfChoices>5
+		<Choices>
+			<choice>Family</choice>
+			<choice>Romantic Partner/Spouse</choice>
+			<choice>Coworkers</choice>
+			<choice>Friends/Peers</choice>
+			<choice>Other</choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum></StartNum>
+			<StartLabel></StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel></MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum></EndNum>
+			<EndLabel></EndLabel>
+		</End>
+		<NumOfDivisions></NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>1
+			<NextQuestion>6a2</NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>6b</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>6a2</QuesID>
+	<QuestionString>Family nearby(With Family): Which family members were nearby(you with)(check all that apply)?</QuestionString>
+	<QuesType>check</QuesType>
+	<NumOfChoices>5
+		<Choices>
+			<choice>Mother</choice>
+			<choice>Brother(s)/Sister(s)</choice>
+			<choice>Children</choice>
+			<choice>Father</choice>
+			<choice>Other Relative</choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum></StartNum>
+			<StartLabel></StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel></MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum></EndNum>
+			<EndLabel></EndLabel>
+		</End>
+		<NumOfDivisions></NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>6b</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>6b</QuesID>
+	<QuestionString>You indicated you were with some person(s)\nAbt Ppl: How close/connected do you feel to the person(s)</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not At All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>6c</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>6c</QuesID>
+	<QuestionString>About the social situation:\nHow much conflict was there?</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not at All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>6d</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>6d</QuesID>
+	<QuestionString>Were any of these people smoking?</QuestionString>
+	<QuesType>Button</QuesType>
+	<NumOfChoices>2
+		<Choices>
+			<choice>Yes</choice>
+			<choice>No</choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum></StartNum>
+			<StartLabel></StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel></MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum></EndNum>
+			<EndLabel></EndLabel>
+		</End>
+		<NumOfDivisions></NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>7</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>7</QuesID>
+	<QuestionString>Right Now</QuestionString>
+	<QuesType>Button</QuesType>
+	<NumOfChoices>15
+		<Choices>
+			<choice>Your home</choice>
+			<choice>Parent's home</choice>
+			<choice>Friend's home</choice>
+			<choice>Other's home</choice>
+			<choice>Work</choice>
+			<choice>In car</choice>
+			<choice>Other transit</choice>
+			<choice>Bar/club</choice>
+			<choice>Coffee shop</choice>
+			<choice>Restaurant</choice>
+			<choice>Sport Venue</choice>
+			<choice>Entertainment Venue</choice>
+			<choice>Outside-public property</choice>
+			<choice>Inside-public property</choice>
+			<choice>Other</choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum></StartNum>
+			<StartLabel></StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel></MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum></EndNum>
+			<EndLabel></EndLabel>
+		</End>
+		<NumOfDivisions></NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>8</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>8</QuesID>
+	<QuestionString>Is smoking allowed in this location?</QuestionString>
+	<QuesType>Button</QuesType>
+	<NumOfChoices>2
+		<Choices>
+			<choice>Yes</choice>
+			<choice>No</choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum></StartNum>
+			<StartLabel></StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel></MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum></EndNum>
+			<EndLabel></EndLabel>
+		</End>
+		<NumOfDivisions></NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>9</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>9</QuesID>
+	<QuestionString>In the last hour, have you seen or heard any anti-smoking or stop-smoking messages?</QuestionString>
+	<QuesType>Button</QuesType>
+	<NumOfChoices>2
+		<Choices>
+			<choice>Yes</choice>
+			<choice>No</choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum></StartNum>
+			<StartLabel></StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel></MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum></EndNum>
+			<EndLabel></EndLabel>
+		</End>
+		<NumOfDivisions></NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>10</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>10</QuesID>
+	<QuestionString>In the last hour, have you seen or heard any cigarette or tobacco promotions or advertising?</QuestionString>
+	<QuesType>Button</QuesType>
+	<NumOfChoices>2
+		<Choices>
+			<choice>Yes</choice>
+			<choice>No</choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum></StartNum>
+			<StartLabel></StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel></MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum></EndNum>
+			<EndLabel></EndLabel>
+		</End>
+		<NumOfDivisions></NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>11</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>11</QuesID>
+	<QuestionString>Did you drink alcohol in the last hour?</QuestionString>
+	<QuesType>Button</QuesType>
+	<NumOfChoices>2
+		<Choices>
+			<choice>Yes</choice>
+			<choice>No</choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum></StartNum>
+			<StartLabel></StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel></MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum></EndNum>
+			<EndLabel></EndLabel>
+		</End>
+		<NumOfDivisions></NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>1
+			<NextQuestion>11a</NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>12</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>11a</QuesID>
+	<QuestionString>How much alcohol did you consume in the last hour?</QuestionString>
+	<QuesType>Button</QuesType>
+	<NumOfChoices>7
+		<Choices>
+			<choice>Less than 1 drink</choice>
+			<choice>1 drink</choice>
+			<choice>2 drinks</choice>
+			<choice>3 drinks</choice>
+			<choice>4 drinks</choice>
+			<choice>5 drinks</choice>
+			<choice>6 or more drinks</choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum></StartNum>
+			<StartLabel></StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel></MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum></EndNum>
+			<EndLabel></EndLabel>
+		</End>
+		<NumOfDivisions></NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>12</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>12</QuesID>
+	<QuestionString>Have you used marijuana in the last hour?</QuestionString>
+	<QuesType>Button</QuesType>
+	<NumOfChoices>2
+		<Choices>
+			<choice>Yes</choice>
+			<choice>No</choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum></StartNum>
+			<StartLabel></StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel></MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum></EndNum>
+			<EndLabel></EndLabel>
+		</End>
+		<NumOfDivisions></NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>1
+			<NextQuestion>12a1</NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>13</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>12a1</QuesID>
+	<QuestionString>How did you consume the marijuana(check all that apply)?</QuestionString>
+	<QuesType>check</QuesType>
+	<NumOfChoices>7
+		<Choices>
+			<choice>Smoked a joint</choice>
+			<choice>Smoked a blunt</choice>
+			<choice>One hitter/dugout</choice>
+			<choice>Smoked a bowl or pipe</choice>
+			<choice>Smoked from a bong</choice>
+			<choice>Used a vaporizer</choice>
+			<choice>Ingested(for example: marijuana brownies)</choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum></StartNum>
+			<StartLabel></StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel></MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum></EndNum>
+			<EndLabel></EndLabel>
+		</End>
+		<NumOfDivisions></NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>12a2</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>12a2</QuesID>
+	<QuestionString>How many hits did you take in the last hour?</QuestionString>
+	<QuesType>Button</QuesType>
+	<NumOfChoices>6
+		<Choices>
+			<choice>1 hit</choice>
+			<choice>2 hits</choice>
+			<choice>3 hits</choice>
+			<choice>4 hits</choice>
+			<choice>5 hits</choice>
+			<choice>6 or more hits</choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum></StartNum>
+			<StartLabel></StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel></MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum></EndNum>
+			<EndLabel></EndLabel>
+		</End>
+		<NumOfDivisions></NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>12a3</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>12a3</QuesID>
+	<QuestionString>How would you rate your "high"?</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Completely Straight</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel></MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Highest I have ever been</EndLabel>
+		</End>
+		<NumOfDivisions></NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>12a4</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>12a4</QuesID>
+	<QuestionString>Did you smoke a tobacco cigarette during or right after smoking marijuana?</QuestionString>
+	<QuesType>Button</QuesType>
+	<NumOfChoices>2
+		<Choices>
+			<choice>Yes</choice>
+			<choice>No</choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum></StartNum>
+			<StartLabel></StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel></MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum></EndNum>
+			<EndLabel></EndLabel>
+		</End>
+		<NumOfDivisions></NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>13</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>13a</QuesID>
+	<QuestionString>Before smoking: I felt Happy</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not at All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>13b</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>13b</QuesID>
+	<QuestionString>Before smoking: I felt Tired</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not at All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>13c</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>13c</QuesID>
+	<QuestionString>Before smoking: I felt Embarrassed</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not at All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>13d</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>13d</QuesID>
+	<QuestionString>Before smoking: I felt Relaxed</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not at All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>13e</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>13e</QuesID>
+	<QuestionString>Before smoking: I felt Sad</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not at All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>13f</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>13f</QuesID>
+	<QuestionString>Before smoking: I felt Stressed</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not at All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>13g</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>13g</QuesID>
+	<QuestionString>Before smoking: I felt Angry</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not at All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>13h</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>13h</QuesID>
+	<QuestionString>Before smoking: I felt Cheerful</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not at All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>13i</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>13i</QuesID>
+	<QuestionString>Before smoking: I felt Bored</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not at All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>13j</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>13j</QuesID>
+	<QuestionString>Before smoking: I felt Frustrated</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not at All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>13k</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>13k</QuesID>
+	<QuestionString>Before smoking: I felt Nervous</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not at All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>13l</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>13l</QuesID>
+	<QuestionString>Before smoking: I felt Irritable</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not at All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>13m</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>13m</QuesID>
+	<QuestionString>Before smoking: I had Trouble Concentrating</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not at All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>13n</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>13n</QuesID>
+	<QuestionString>Before smoking: I felt Confident</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not at All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>13o</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>13o</QuesID>
+	<QuestionString>Before smoking: I felt Accepted by Others</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not at All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>13p</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>13p</QuesID>
+	<QuestionString>Before smoking: I felt Restless</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not at All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>13q</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>13q</QuesID>
+	<QuestionString>Before smoking: I felt Impatient</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not at All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>14a</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>14a</QuesID>
+	<QuestionString>Before smoking: I had an urge for a cigarette</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not at All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>14b</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>14b</QuesID>
+	<QuestionString>Before smoking: I felt that I could control things better if I could smoke</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not at All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>14c</DefaultNext>
+</Question>
+
+<Question>
+	<QuesID>14c</QuesID>
+	<QuestionString>Before smoking: I felt that smoking would make me less depressed</QuestionString>
+	<QuesType>slider</QuesType>
+	<NumOfChoices>
+		<Choices>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum>1</StartNum>
+			<StartLabel>Not at All</StartLabel>
+		</Start>
+		<Middle>
+			<MiddleLabel>Somewhat</MiddleLabel>
+		</Middle>
+		<End>
+			<EndNum>10</EndNum>
+			<EndLabel>Very Much</EndLabel>
+		</End>
+		<NumOfDivisions>10</NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion></NextQuestion>
+		</Condition>
+	</SliderScale>
+	<DefaultNext>0</DefaultNext>
+</Question>
+
+</Survey>
+
+</Survey>

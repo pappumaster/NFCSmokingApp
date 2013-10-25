@@ -1,0 +1,74 @@
+<!--Notes:
+	For NextQues or DefaultNextQues: 0 specifies that current question is end of survey
+	Radio Button conditions: numbers 1-5 ONLY
+	Check Boxes conditions: numbers 1-5 separated by "&" 
+	Slider Conditions: - [less than] (number) OR + [greater than] (number) OR > (num) & < (num) 
+-->
+
+
+<?xml version= "1.0"?>
+<Question>
+	<QuesID> 1 </QuesID>
+	<QuestionString>Was this the first time you smoked all day?</QuestionString>
+	<QuesType>Button</QuesType>
+	<NumOfChoices> 2
+		<Choices>
+			<choice>Yes</choice>
+			<choice>No</choice>
+			<choice> </choice>
+			<choice> </choice>
+			<choice> </choice>
+		</Choices>
+	</NumOfChoices>
+	<SliderScale>
+		<Start>
+			<StartNum> </StartNum>
+			<StartLabel> </StartLabel>
+		<End>
+			<EndNum> </EndNum>
+			<EndLabel> </EndLabel>
+		<NumOfDivisions> </NumOfDivisions>
+	</SliderScale>
+	<RadioButtons>
+		<Condition>1
+			<NextQuestion>3</NextQuestion>
+		</Condition>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+		<DefaultNext> </DefaultNext>
+	</RadioButtons>
+	<CheckBoxes>
+		<Condition>1
+			<NextQuestion>3</NextQuestion>
+		</Condition>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+		<DefaultNext>2</DefaultNext>
+	</CheckBoxes>
+	<SliderScale>
+		<Condition>
+			<NextQuestion> </NextQuestion>
+		</Condition>
+		<DefaultNext> </DefaultNext>
+	</SliderScale>
+</Question>
